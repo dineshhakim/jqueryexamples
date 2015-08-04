@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function oncall(){
+				 x = 10;
+				var o = { x: 15 };
+			 
+				function f()
+				{
+				    alert(this.x);
+				}
+			 
+				f();
+				f.call(o);
+			}
+			function oncallwitharg()
+			{				
+				var x = 10;
+				var o = { x: 15 };
+				function f(message)
+				{
+				    alert(message);
+				    alert(this.x);
+				}
+				 
+				f("invoking f");
+				f.call(o, "invoking f via call");
+			}
+			function onapply(){
+				var x = 10;
+				var o = { x: 15 };
+				function f(message)
+				{
+				    alert(message);
+				    alert(this.x);
+				}
+				 
+				f("invoking f");
+				f.apply(o, ["invoking f through apply"]);
+			}
+			function onapplywitharg()
+			{
+				var o = { x: 15 };
+ 
+				function f1(message1)
+				{
+				    alert(message1 + this.x);
+				}
+				 
+				function f2(message1, message2)
+				{
+				    alert(message1 + (this.x * this.x) + message2);
+				}
+				 
+				function g(object, func, args)
+				{
+				    func.apply(object, args);
+				}
+				 
+				g(o, f1, ["the value of x = "]);
+				g(o, f2, ["the value of x squared = ", ". Wow!"]);
+			}
+			function alerthello()
+			{
+				function f(message)
+				{
+				    alert(message);
+				}
+				 
+				f("H", "e", "l", "l", "o");
+			}
+			function alerthellowithargument()
+			{
+				function f(message)
+				{
+    				// message param is the same as arguments[0]    
+    
+    			for(var i = 1; i < arguments.length; i++)
+				    {
+				        message += arguments[i];
+				    }
+				     
+				    alert(message); 
+				}
+				 
+				// this will say "Hello"
+				f("H", "e", "l", "l", "o");
+			}
+			function alerttwomessage()
+			{
+				var o = { x: 15 };
+ 
+				function f(message1, message2)
+				{
+				    alert(message1 + (this.x * this.x) + message2);
+				}
+				 
+				function g(object, func)
+				{           
+				    // arguments[0] == object
+				    // arguments[1] == func
+				     
+				     
+				    var args = []; // empty array
+				    // copy all other arguments we want to "pass through" 
+				    for(var i = 2; i < arguments.length; i++)
+				    {
+				        args.push(arguments[i]);
+				    }
+				 
+				    func.apply(object, args);
+				}
+				 
+				g(o, f, "The value of x squared = ", ". Wow!");
+				
+			}
+		  var incrementcount=	(function (){			
+				var clickcount =0;
+				return function (){
+					return ++clickcount;
+				}
+			})();
+			function truthy()
+			{
+				alert("new Boolean(false)= "+ new Boolean(false)
+					+"\n"+
+					"Boolean(function(){})= "+ Boolean(function(){})
+					+"\n"+
+					"Boolean(/foo/) ="+Boolean(/foo/)
+					+"\n"+
+					"true%1= " +true%1
+					+"\n"+
+					"''%1 ="+' '%1
+					);
+				 
+				 
+			}
+			function foo(){
+			    function bar() {
+			        return 3;
+			    }
+				 
+			    return bar();
+			    function bar() {
+			        return 8;
+			    }
+				 
+			}
+			
+			
+			function closureexp()
+			{
+				for(var i = 0; i < 10; i++) {
+				    setTimeout(function() {
+				      console.log(i);  
+				    }, 10);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="oncall()">OnCall</button>
+		
+		<button onclick="oncallwitharg()">OnCallwitharg</button>
+		<button onclick="onapply()">OnApply</button>
+		<button onclick="onapplywitharg()">OnApplywitharg</button>
+		<br/>
+		<button onclick="alerthello()">alerthello</button>
+		<button onclick="alerthellowithargument()">alerthellowithallarguments</button>
+		<br/>
+		<button onclick="alerttwomessage()">alerttwomessage</button>
+		<button onclick="alert(incrementcount());">incrementcount++</button>
+		<button onclick="truthy();">checktruthy</button>
+<button onclick="closureexp();">closureexp</button>
+	</body>
+
+</html>

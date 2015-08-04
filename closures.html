@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/site.js"></script>
+		<script type="text/javascript">
+			function oncall(){
+					 x = 10;
+					var o = { x: 15 };
+				 
+					function f()
+					{
+					    alert(this.x);
+					}
+				 
+					f();
+					f.call(o);
+				}
+				function oncallwitharg()
+				{				
+					var x = 10;
+					var o = { x: 15 };
+					function f(message)
+					{
+					    alert(message);
+					    alert(this.x);
+					}
+					 
+					f("invoking f");
+					f.call(o, "invoking f via call");
+				}
+				function onapply(){
+					var x = 10;
+					var o = { x: 15 };
+					function f(message)
+					{
+					    alert(message);
+					    alert(this.x);
+					}
+					 
+					f("invoking f");
+					f.apply(o, ["invoking f through apply"]);
+				}
+				function onapplywitharg()
+				{
+					var o = { x: 15 };
+	 
+					function f1(message1)
+					{
+					    alert(message1 + this.x);
+					}
+					 
+					function f2(message1, message2)
+					{
+					    alert(message1 + (this.x * this.x) + message2);
+					}
+					 
+					function g(object, func, args)
+					{
+					    func.apply(object, args);
+					}
+					 
+					g(o, f1, ["the value of x = "]);
+					g(o, f2, ["the value of x squared = ", ". Wow!"]);
+				}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main">
+					<h1>Closures</h1>
+					<p>Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers'
+						the environment in which it was created.</p>
+					<h2>Demo</h2>
+					<h3>Call</h3>
+					<p>function oncall(){ x = 10; var o = { x: 15 }; function f() { alert(this.x); } f(); f.call(o); }</p>
+					<button onclick="oncall()">OnCall</button>
+					<hr>
+					<h3>Call with Arg</h3>
+					<p>function oncallwitharg() { var x = 10; var o = { x: 15 }; function f(message) { alert(message); alert(this.x); } f("invoking
+						f"); f.call(o, "invoking f via call"); }</p>
+					<button onclick="oncallwitharg()">OnCallwitharg</button>
+					<hr>
+					<h3>Apply</h3>
+					<button onclick="onapply()">OnApply</button>
+					
+					<hr>
+					<button onclick="onapplywitharg()">OnApplywitharg</button>
+				</div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>
