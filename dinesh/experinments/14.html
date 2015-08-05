@@ -1,0 +1,31 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+	<script type="text/javascript">
+		function execute()
+				{
+					var a = [1, 2, 3, 4], result, i;
+					jQuery.extend(a, {get:jQuery.fn.get});     // because pushStack uses get
+					var result = jQuery.fn.pushStack.apply(a); // push a onto a.stack
+					for (i=0; i<a.length; i++) {               // modify a to [2, 3, 4, 5]
+					   a[i]++;
+					}
+					jQuery.fn.end.apply(a);  
+					$('#log1').append(JSON.stringify(result));
+					$('#log2').append(JSON.stringify(a));
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>14th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='log2'></div>
+<p>How does this code snippet demonstrate that Javascript arrays are different than Java arrays?
+</p>
+<p>    </p>
+<p>
+	When is the constructor property of an object set?
+</p>
+<p></p>
+<p>Modify the code snippet so that breakpoint 259 is </p>
+<p></p>

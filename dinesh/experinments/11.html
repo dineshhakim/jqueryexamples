@@ -1,0 +1,18 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+	<script type="text/javascript">
+		function execute()
+				{
+					var a = [1, 2, 3, 4, 3, 2, 1];
+					result = jQuery.map(a, "a*2");
+					$('#log1').append(JSON.stringify(result));
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>11th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='log2'></div>
+<p>Would "b*2" work? Why or why not?</p>
+<p>No "b*2" doesnot work. It is because we are passing the object as parameters to the function. The string pass as parameter acts as closure </p>

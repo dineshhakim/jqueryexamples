@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="../../scripts/jquery.js"></script>
+		<script type="text/javascript">
+			function run1()
+			{				
+				var el;
+			var f = function () {
+			   var buffer = "safari: " + this.safari;
+			   buffer += "<br/>opera: " + this.opera;
+			   buffer += "<br/>msie: " + this.msie;
+			   buffer += "<br/>mozilla: " + this.mozilla;
+			   return buffer;
+			}
+			jQuery.extend(jQuery.browser, {toString: f});
+			$('#log1').append(jQuery.browser.toString());
+			}
+			$(function()
+				{
+					run1();
+					
+				});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main">
+					<h1>7th Experinment</h1>
+					<div id="log1"></div>
+					<h2></h2>
+					<div id='log2'></div>
+					<p>Q) What would happen if the jQuery.browser argument were omitted from the call to jQuery.extend?</p>
+					<p>
+					Ans:	toString() method will not be added to jquery.browser
+					</p>
+				</div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>

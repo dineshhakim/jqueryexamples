@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="../../scripts/jquery.js"></script>
+		<script type="text/javascript">
+			function run1() { 
+			var ps = document.querySelectorAll(".foo"); 
+			function setBackground(i, el)
+			{ 
+				el.style.backgroundColor="red";
+			}
+			jQuery.each(ps, setBackground); 
+			}
+			$(function()
+				{
+					run1();
+				});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main">
+					<h1>6th Experinment</h1>
+					<h2>This example uses jQuery.each with an array of DOM elements</h2>
+					<div id="log1" class="foo">Hello</div>
+					<br>
+					<br>
+					<div id="log2" class="foo">I</div>
+					<br>
+					<br>
+					<div id="log3" class="foo">Am</div>
+					<br>
+					<br>
+					<div id="log4" class="foo">Dinesh</div>
+					<h2></h2>
+					<div id='log2'></div>
+				</div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>

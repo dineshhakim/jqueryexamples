@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="../../scripts/jquery.js"></script>
+		<script type="text/javascript" src="../../scripts/modernizr.js"></script>
+		<script type="text/javascript">
+			function execute()
+			{
+				if (Modernizr.canvas) { 
+		 			$('#log1').append("Browser supports canvas");
+				 } 
+				 else{
+					 
+					 $('#log1').append("Browser doesnot support canvas");
+				 }
+		 	}
+			 $(function(){					 
+				execute(); 
+			 });
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main">
+					<h1>8th experinment</h1>
+					<div id="log1"></div>
+					<h2></h2>
+					<div id='log2'></div>
+					<p>Q) At what line in modernizr.js is Modernizr.canvas is set to true?</p>
+					<p>
+						Ans: 419
+					</p>
+				</div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>

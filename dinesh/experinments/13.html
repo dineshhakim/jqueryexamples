@@ -1,0 +1,18 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+	<script type="text/javascript">
+		function execute()
+				{
+					a = [1, 2, 3, 4];
+					result = jQuery.grep(a, "a % 2 == 0");
+					$('#log1').append(JSON.stringify(result));
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>13th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='log2'></div>
+<p>How could you use "a % 2 == 0" to select the odd elements of the array?</p>
+<p> Use a % 2 != 0  </p>

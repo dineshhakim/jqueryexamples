@@ -1,0 +1,20 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+	<script type="text/javascript">
+		function execute()
+				{
+					var els = document.querySelectorAll("p");
+					result = jQuery.map(els, "a.style.background-color='red';");
+					$('#log1').append(result);
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>12th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='log2'></div>
+<p>
+	<a>
+	Is the above equivalent to $("p").css("background-color", "red")?</p>
+<p>No  </p>

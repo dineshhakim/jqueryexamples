@@ -25,19 +25,25 @@
 				jQuery.each(a,
 				   function(fn) {	
 				      b.push(fn(this));
-				   },  
+				   }, 
 				   [function(n){return n+5}]);
 				  $('#log2').append("a: "+ JSON.stringify(a));
 				$('#log2').append("<br>b: "+ JSON.stringify(b)); 
 			}
-			function runscript()
-			{				
+			function f()
+			{
 				run1();
 				run2();
 			}
+			$(function()
+				{
+					f();
+					
+				});
+		
 		</script>
 	</head>
-	<body onload="runscript()">
+	<body>
 		<div class="container">
 			<header id='header'></header>
 			<div class="content">

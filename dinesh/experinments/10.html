@@ -1,0 +1,27 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+			{
+				var a = [1, 2, 3, 4, 3, 2, 1,1,1,1,5,7,6];
+				var f = function(value, index) {
+				   return value*2;
+				}
+				result = jQuery.map(a, f);
+				$('#log1').append(JSON.stringify(result));
+			}
+			$(function(){
+				execute();				
+			});
+</script>
+<body>
+	<h1>10th experinment</h1>
+	<div id="log1"></div>
+	<h2></h2>
+	<div id='log2'></div>
+	<p>How does jQuery.map remove duplicates?</p>
+	<p>
+		There is a for loop in line 756 which is used to check for duplicates and add only unique items		
+	</p>
+	 
+	 
+</body>
