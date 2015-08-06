@@ -1,0 +1,25 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+				{
+					obj = document.getElementById("id3");
+					console.log(jQuery.className.has(obj, "cl2"));					 
+					$('#log1').append(jQuery.className.has(obj, "cl2"));
+					   
+					 
+					 
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>16th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='id3'></div>
+<p>Q) What happens if the DOM element does not have a className property?</p>
+<p>Ans: If the DOM element has not a className property then it is undefined </p>
+<p>Q) Line 347 tests whether e.className is undefined. Can you think of a situation where this will be true?</p>
+<p>Ans:</p>
+<p>Q) Line 349 demonstrates the difference between the RegExp constructor function and the // literal. What is it?</p>
+<p>Ans:</p>

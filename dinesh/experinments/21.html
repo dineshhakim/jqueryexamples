@@ -1,0 +1,39 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+    function execute()
+    				{
+    					var els = document.querySelectorAll("p");    // get DOM elements to filter	
+                         var filtered = jQuery.filter(".foo", els);   // get DOM element with class = 'foo'
+                        var selected = filtered.r;                   // these are the .foo DOM elements
+                        for (i=0; i<selected.length; i++) {
+                            selected[i].style.backgroundColor = "red";  // make their background colors red
+                        }
+                        
+                         els = document.querySelectorAll("p");    // get DOM elements to filter	
+                          filtered = jQuery.filter(".ans", els);   // get DOM element with class = 'ans'
+                         selected = filtered.r;                   // these are the .foo DOM elements
+                        for (i=0; i<selected.length; i++) {
+                            selected[i].style.backgroundColor = "green";  // make their background colors green
+                        }
+    					   $('#log2').append(str.trim());
+    					 
+    					 
+    				}
+    				$(function(){
+    					execute();				
+    				});
+</script>
+<h1>16th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id="log2"></div>
+<p class='foo'>Q) What is the value of f at line 706 (Use f.toString() in the console). Does this function make sense?</p>
+<p class='ans'>asdaf</p>
+<p class='foo'>What regular expressions are executed before a match is found?</p>
+<p class='ans'>asdf</p>
+<p class='foo'>What regular expression matches ".foo"?</p>
+<p class='ans'>asdaf</p>
+<p class='foo'>What is g at line 706?</p>
+<p class='ans'>asdf</p>
+<p class='foo'>What gets returned by jQuery.filter?</p>
+<p class='ans'>asdf</p>

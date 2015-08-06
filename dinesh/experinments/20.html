@@ -1,0 +1,21 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+				{
+					var s = jQuery.trim(" \tabc\tasdf ");
+					$('#log1').append(s);
+					var str=" \tabc\tasdf"
+					   $('#log2').append(str.trim());
+					 
+					 
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>16th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id="log2"></div>
+<p>Q)  Does jQuery.trim do the same thing? If so why is it in jQuery. If not how does it differ?</p>
+<p>Ans: Yes both do the same thing. But string.trim() is not supported by IE 8 so we need jquery.trim</p>

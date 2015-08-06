@@ -1,0 +1,22 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+				{
+					var obj = document.getElementById("id3");
+					jQuery.className.remove(obj, "cl2");				 
+					$('#log1').append(jQuery.className.has(obj, "cl2"));
+					   
+					 
+					 
+				}
+				$(function(){
+					execute();				
+				});
+</script>
+<h1>16th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='id3' class='cl1  cl2 cl3'></div>
+<p>Q) However, it does not remove cl2 if two blanks separate cl2 from cl1. Why?</p>
+<p>Ans: It is because it has use regex which is just checking for one blank space not for two blank spaces </p>
+ 
