@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		 
+		<script type="text/javascript">
+			function execute()
+				{				
+				
+						var obj = new Object();
+					   obj.a = 5
+					   obj.b = "hello";
+					   obj.c = {};
+					   obj.c.a = 10;
+					   obj.d = [];
+					   obj.d.push(5)
+					   obj.d.push(10);
+					//   alert(JSON.stringify(obj));
+						$('#log1').append(JSON.stringify(obj));
+						var obj1 = {"a":5,"b":"hello","c":{"a":10},"d":[5,10]}
+						alert(JSON.stringify(obj1));
+				}
+				$(function(){
+					execute();				
+				});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main"></div>
+				<div id='#log1'></div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>

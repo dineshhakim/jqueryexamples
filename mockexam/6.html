@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			function execute()
+				{				
+					function foo(n1, n2) {
+						
+						alert(JSON.stringify(this) + "and "+(n1+n2));
+					}						 
+						 foo.apply({a:5, b:6}, [10, 15]);
+						
+				}
+				 
+				$(function(){
+					execute();				
+				});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main"></div>
+				<div id='#log1'></div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>

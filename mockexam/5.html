@@ -1,0 +1,44 @@
+
+		
+		<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="jquery.js"></script>
+		 
+		 
+		<script type="text/javascript">
+			function execute()
+				{				
+				
+						var obj = (function() {
+						var i, f;
+						f = [];
+						for (i=0; i<3; i++) {
+							f.push(function() {console.log(i)});
+						 
+						}
+						
+						return f;	
+					})();
+				 
+					obj[0]()//  writes 3 to console
+					obj[1]() // writes 3 to console
+					obj[2]() // writes 3 to console
+				}
+				$(function(){
+					execute();				
+				});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header id='header'></header>
+			<div class="content">
+				<div class="main"></div>
+				<div id='#log1'></div>
+			</div>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+
+</html>
