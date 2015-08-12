@@ -1,0 +1,56 @@
+Introduction: UnderTheHood/introduction.html
+X__ Object Literals
+X__ JavaScript is a loosely-typed language
+X__ JavaScript functions are first class objects
+X__ JavaScript new command
+X__ Closure
+X__ Closure in jQuery
+X__ Global variables
+X__ Five ways to set "this"
+X__ Difference between == and ===
+X__ Chaining pattern
+X__ "Overloading" functions in JavaScript
+X__ Chrome debugger suggestions
+
+Demos
+X__ demoExperiment14
+X__ demoLiveNodeList
+X__ demoPrivate
+X__ demojQuery
+X__ mondayTest
+
+Experiments Phase I
+X__ 1. Step through interpretation of jquery-1.0.js
+X__ 2. What names do jQuery add to global name space
+X__ 3. Add a function to an object using jQuery.extend()
+X__ 4. Use jQuery.each to modify the elements of an array
+X__ 5. Here is an invocation of jQuery.each with 3 arguments. Why is 3rd argument an array?
+X__ 6. Using jQuery.each with an array of DOM objects
+X__ 7. Use jQuery.extend to add a toString method to jQuery.browser.
+__ 8. Modernizr.canvas
+X__ 9. Use jQuery.merge to merge two arrays getting rid of duplicates
+X__ 10. Use jQuery.map to multiply all elements of an array by two.
+X__ 11. Pass a string rather than a function as the second argument of jQuery.map
+X__ 12. Use jQuery.map to modify DOM elements
+X__ 13. Use jQuery.grep to select the even elements from an array
+___ 14. pushStack
+X__ 15. Regular expressions used in jQuery
+X__ 16. jQuery.className.has
+X__ 17. jQuery.className.add
+X__ 18. jQuery.className.remove
+X__ 19. jQuery.getAll
+X__ 20. jQuery.trim()
+X__ 21. jQuery.filter
+
+Experiments Phase II
+X__ 1. $("#p1")
+X__ 2. $("#p1").css("color", "red")
+X__ 3. $(foo)
+X__ 4. obj.empty()
+X__ 5. $("<p>");
+X__ 6. obj.append()
+X__ 7. p.attr("id", "id10")
+X__ 8. p.html("New paragraph");
+X__ 9. Fixing bugs in pseudo class functions
+X__ 10. $("#divid").click(function () {debugger; console.log("here");});
+___ 11. Study the evolution of a function or object of your choice using the Comparisons program.
