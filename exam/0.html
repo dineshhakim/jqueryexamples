@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+	 function Foo(){
+					 this.a =5;
+					 Foo.prototype.foo =function(){
+						 console.log(this.a)
+						 };
+					 
+				 }
+				 var obj = new Foo();
+				 obj.foo();
+		function execute()
+			{
+		 
+				 function Foo(){
+					 this.a =5;
+					 Foo.prototype.foo =function(){
+						 console.log(this.a)
+						 };
+					 
+				 }
+				 var obj = new Foo();
+				 obj.foo();
+			}
+			$(function(){
+				execute();				
+			});
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<header id='header'></header>
+		<div class="content">
+			<div class="main">
+
+			</div>
+		</div>
+		<footer class="footer"></footer>
+	</div>
+</body>
+
+</html>

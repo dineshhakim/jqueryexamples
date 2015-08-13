@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+	  
+		function execute()
+			{
+ 
+				// function foo(n1) {
+      			// console.log("" + this.a + ", " + this.b + ", " + n1[0]+ ", " + n1[1]);
+   				//  }
+				// foo.call({a:5, b:6}, [10, 15])
+				// var arr1 = [9,10,11, 12];
+				// result = arr1.toString();
+				// result =result +5;
+				// console.log(result);
+	// 			
+	// 			 var obj1 = (function () {
+	// 				var a;
+	// 				a = 5;
+	// 				return {
+	// 					foo: function(){console.log(a)}
+	// 				}
+	// 			})();
+	// 			
+	// 			  function Foo() {
+	// 			this.a = 5;
+	// 			}
+	// 			Foo.prototype.foo = function(){console.log(this.a)}	
+	// 			var obj2 = new Foo();
+    // alert(JSON.stringify(obj2));
+				var obj = (function() {
+				var i, f;
+				f = [];
+				for (i=0; i<3; i++) {
+					f.push(function() {console.log(i)});
+				}
+				
+				return f;	
+			})();
+			
+			obj[0]() // writes 3 to console
+			obj[1]() // writes 3 to console
+			obj[2]() // writes 3 to console
+			
+			
+		  obj = (function() {
+        var i, f;
+        f = [];
+        for (i=0; i<3; i++) {
+            (function(m) {
+                f.push(function () {
+                    console.log(m);
+                })
+            })(i);
+        }
+
+        return f;
+    })();
+			obj[0]() // writes 3 to console
+			obj[1]() // writes 3 to console
+			obj[2]() // writes 3 to console
+				
+			}
+			$(function(){
+				execute();				
+			});
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<header id='header'></header>
+		<div class="content">
+			<div class="main">
+
+			</div>
+		</div>
+		<footer class="footer"></footer>
+	</div>
+</body>
+
+</html>
+		 

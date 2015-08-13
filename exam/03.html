@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+		function execute()
+			{
+ 
+				// function foo(n1) {
+      			// console.log("" + this.a + ", " + this.b + ", " + n1[0]+ ", " + n1[1]);
+   				//  }
+				// foo.call({a:5, b:6}, [10, 15])
+				// var arr1 = [9,10,11, 12];
+				// result = arr1.toString();
+				// result =result +5;
+				// console.log(result);
+	// 			
+	// 			 var obj1 = (function () {
+	// 				var a;
+	// 				a = 5;
+	// 				return {
+	// 					foo: function(){console.log(a)}
+	// 				}
+	// 			})();
+	// 			
+	// 			  function Foo() {
+	// 			this.a = 5;
+	// 			}
+	// 			Foo.prototype.foo = function(){console.log(this.a)}	
+	// 			var obj2 = new Foo();
+    // alert(JSON.stringify(obj2));
+				//  div = $("#log1");
+				// divs = document.getElementsByClassName("abc");
+				//           
+				// div1 = $("<div class=\"cde\">");
+				// div.append(divs);
+				// div1.html("Hello");
+				//  console.log(divs.length);   
+				
+				// var obj = {a:5,b:"hello"};
+				// function toString1() {
+				// 	console.log("a: " + this.a + ", b:" + this.b)
+				// }
+				// jQuery.extend(obj, {toString: toString1});	
+				// 		obj.toString();	
+				
+				 var a = ["up", "down", "left", "right"];
+   var b = {};
+
+   function myconcat(suffix) {
+     b[this] = this + suffix;
+   }
+			
+   jQuery.each(a, myconcat, ["!"]);
+   
+   console.log(JSON.stringify(a));
+    console.log(JSON.stringify(b));
+   
+    function myconcat1(suffix) {
+		 var a = ["up", "down", "left", "right"];
+   		var b = {};
+     	b[this] = a[this] + suffix;
+	 	console.log(b[this]);
+   }
+	jQuery.each(a, myconcat1, ["!"]);
+	$('.abc').addClass('.abc');
+	
+						}
+						$(function(){
+							execute();				
+						});
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<header id='header'></header>
+		<div class="content">
+			<div class="main">
+				<div id='log1'>
+				</div>
+				<div class='abc'>
+					hi! abc
+				</div>
+				<div class='abc'>
+					hi! abc
+				</div>
+			</div>
+		</div>
+		<footer class="footer"></footer>
+	</div>
+</body>
+
+</html>

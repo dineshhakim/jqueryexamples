@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+	  
+		function execute()
+			{
+		 
+				//  var obj = new Object();
+				// 	obj.a = 5
+				// 	obj.b = obj.a;
+				// 	obj.c = {};
+				// 	obj.c.a = 10;
+				// 	obj.d = [];
+				// 	obj.d.push(5)
+				// 	obj.d.push(10);
+				// 	var obj1 = {
+				// 		  a:5,
+				// 		b:this.a,
+				// 		c:{ a : 10},
+				// 		d: [5, 10]
+				// 	}
+				// 	alert(JSON.stringify(obj));
+				// 	alert(JSON.stringify(obj1));
+				 
+				
+				 
+					
+				function Foo(value) {
+					this.value = value;		
+				}
+					
+				Foo.prototype.add = function(n) {
+					this.value += n;
+					return this;
+				}
+					
+				Foo.prototype.multiply = function(n) {
+					this.value *= n;
+					return this;
+				}
+					
+				Foo.prototype.display = function() {
+					alert(this.value);
+					return this;
+				}
+					var f = new Foo(10);
+					f.add(10).multiply(2).display();
+			}
+			$(function(){
+				execute();				
+			});
+	</script>
+
+</head>
+
+<body>
+	<div class="container">
+		<header id='header'></header>
+		<div class="content">
+			<div class="main">
+
+			</div>
+		</div>
+		<footer class="footer"></footer>
+	</div>
+</body>
+
+</html>

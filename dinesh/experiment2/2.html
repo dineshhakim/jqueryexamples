@@ -1,0 +1,81 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+			{
+				 $("#p1").css("color", "red");
+				  $("<p>").css("color", "red");
+				  $("#p1").attr("id", "id10");
+				   $("#id10").html("New paragraph")
+			}
+			$(function(){
+				execute();				
+			});
+</script>
+ 
+	<h1>10th experinment</h1>
+	<div id="log1"></div>
+	<h2></h2>
+	<div id='log2'></div>
+	<p id="p1">Use debugger to step through</p>	 
+	<p>1. Line 126: What is the value of this? Why?</p>
+	<p>
+			this is Object with 0 =p#p1, length=1, jquery="$Rev : 509$"
+	</p>
+	<p>2. Line 88: Explain difference between this each and jQuery.each. Hint: look at line 62.</p>
+	<p>
+			each call jQuery.each inside
+	</p>
+	<p>3. Line 332: What is fn</p>
+	<p>
+		fn literally refers to the jquery prototype.
+	</p>
+	<p>4. Line 332: Explain the two arguments of apply.</p>
+	<p>
+		one is obj[i] and it refers to the document object which has height, width, top, left,position, color, background etc and other is args	which is undefined
+	</p>
+	<p>5. Line 116: How did type get its value?</p>
+	<p>
+		type got its value from this which is p#p1 in this context	
+	</p>
+	<p>6. Line 621: What is the purpose of the fix object?</p>
+	<p>
+			fix is enum holding some values. It is used to set the value the element from set of values in fix.
+	</p>
+	<p>7. Lines 557-566: More xmlpath stuff? Will experiment with this later.</p>
+	<p>
+			
+	</p>
+	<p>8. Line 557: Why is loop variable i being incremented by 2 instead of 1?</p>
+	<p>
+			
+	</p>
+	<p>9. Where is document.getElementById done?</p>
+	<p>
+			
+	</p>
+	<p>10. Line 596: Why is t the empty string?</p>
+	<p>
+			
+	</p>
+	<p>10. Line 596: Why is t the empty string?</p>
+	<p>
+			
+	</p>
+	<p>11. Line 603: What is the value of ret at this point. Why?</p>
+	<p>
+			
+	</p>
+	<p>12. Line 71: What is the value of "this"? Why?</p>
+	<p>
+			
+	</p>
+	
+	<p>13. Line 76: What is going on here? What if call were used rather than apply? </p>
+	<p>
+			
+	</p>
+	 
+ <p>14. Move the script into the <head> element just after the jquery-1.0.js script and run again. Why is 0 printed on the console?</p>
+	<p>
+			
+	</p>

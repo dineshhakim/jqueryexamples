@@ -1,0 +1,79 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function experimentPseudo(n) {
+	    var t = [
+	      "p:.lt(2)",     // 0
+	      "p:.eq(1)",     // 1
+	      "p:.nth(1)",    // 2
+	      "p:.gt(1)",     // 3
+	      "p:.even",      // 4
+	      "p:.odd",       // 5
+	      "p:.first",     // 6
+	      "p:.last",      // 7
+	
+	      "p:.first-child",  // 8
+	      "p:.last-child",   // 9
+	      "p:.only-child",   // 10
+	
+	      "p:.contains('hello')",  // 11
+	      "p:.empty",      // 12
+	
+	      "p:.checked",    // 13
+	      "p:.enabled",    // 14
+	      "p:.disabled",   // 15
+	      "p:.hidden",     // 16
+	      "p:.parent",     // 17
+	      "p:.selected",   // 18
+	      "p:.visible",    // 19
+					
+	      "p#p2",          // 20
+	      "p[id]",         // 21
+	
+	      "[@id]",         // 22
+	      "[@id!='p2']",   // 23
+	      "[@id*='p2']",   // 24
+	      "[@id='p2']",    // 25
+	      "[@id^='p2']",   // 26
+					
+	    ];
+	    var ps = $(t[25]);   // change this
+	    ps.css("background-color", "blue");
+	    console.log(ps.length);
+  }
+</script>
+<h1>10th experinment</h1>
+<div id="log1"></div>
+<h2></h2>
+<div id='log2'></div>
+<p id="p1">Use debugger to step through</p>
+<p>1. Line 126: What is the value of this? Why?</p>
+<p></p>
+<p>2. Line 88: Explain difference between this each and jQuery.each. Hint: look at line 62.</p>
+<p></p>
+<p>3. Line 332: What is fn</p>
+<p></p>
+<p>4. Line 530: What is the value of context after this line is executed? Why?</p>
+<p></p>
+<p>5. Lines 534-543: Any idea what is going on here? Hint: Google jQuery xmlpath</p>
+<p></p>
+<p>6. Line 551: What is the purpose of the variable last</p>
+<p></p>
+<p>7. Lines 557-566: More xmlpath stuff? Will experiment with this later.</p>
+<p></p>
+<p>8. Line 557: Why is loop variable i being incremented by 2 instead of 1?</p>
+<p></p>
+<p>9. Where is document.getElementById done?</p>
+<p></p>
+<p>10. Line 596: Why is t the empty string?</p>
+<p></p>
+<p>10. Line 596: Why is t the empty string?</p>
+<p></p>
+<p>11. Line 603: What is the value of ret at this point. Why?</p>
+<p></p>
+<p>12. Line 71: What is the value of "this"? Why?</p>
+<p></p>
+<p>13. Line 76: What is going on here? What if call were used rather than apply?</p>
+<p></p>
+<p>14. Move the script into the
+	<head>element just after the jquery-1.0.js script and run again. Why is 0 printed on the console?</p>
+<p></p>

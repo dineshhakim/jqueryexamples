@@ -1,0 +1,81 @@
+<script type="text/javascript" src="../../scripts/jquery.js"></script>
+<script type="text/javascript">
+	function execute()
+			{
+				var obj = $("#p1");
+				console.log(obj.length);
+				$('#log1').append(obj.html().length);
+			}
+			$(function(){
+				execute();				
+			});
+</script>
+ 
+	<h1>10th experinment</h1>
+	<div id="log1"></div>
+	<h2></h2>
+	<div id='log2'></div>
+	<p id="p1">Use debugger to step through</p>	 
+	<p>1. Why is the value of "this" different for the two calls to $</p>
+	<p>
+			First one is window and second one is Jquery.
+	</p>
+	<p>2. What is the value of "this" at line 45. Be sure to expand it in the Watch window.</p>
+	<p>
+		Jquery	
+	</p>
+	<p>3. What is the value of "this" at line 526. Why?</p>
+	<p>
+			JQuery(a,c) because jquery.find is called which ic calling jQuery(a,c)
+	</p>
+	<p>4. Line 530: What is the value of context after this line is executed? Why?</p>
+	<p>
+			the value of context is document because no context was provided to the function so the document was set by 
+			using this operator context = context || jQuery.context || document;
+	</p>
+	<p>5. Lines 534-543: Any idea what is going on here? Hint: Google jQuery xmlpath</p>
+	<p>
+			
+	</p>
+	<p>6. Line 551: What is the purpose of the variable last</p>
+	<p>
+			last is holding the previous value of t.
+	</p>
+	<p>7. Lines 557-566: More xmlpath stuff? Will experiment with this later.</p>
+	<p>
+			
+	</p>
+	<p>8. Line 557: Why is loop variable i being incremented by 2 instead of 1?</p>
+	<p>
+			
+	</p>
+	<p>9. Where is document.getElementById done?</p>
+	<p>
+			
+	</p>
+	<p>10. Line 596: Why is t the empty string?</p>
+	<p>
+			
+	</p>
+	<p>10. Line 596: Why is t the empty string?</p>
+	<p>
+			
+	</p>
+	<p>11. Line 603: What is the value of ret at this point. Why?</p>
+	<p>
+			
+	</p>
+	<p>12. Line 71: What is the value of "this"? Why?</p>
+	<p>
+			
+	</p>
+	
+	<p>13. Line 76: What is going on here? What if call were used rather than apply? </p>
+	<p>
+			
+	</p>
+	 
+ <p>14. Move the script into the <head> element just after the jquery-1.0.js script and run again. Why is 0 printed on the console?</p>
+	<p>
+			
+	</p>
