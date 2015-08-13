@@ -45,8 +45,10 @@ Rewrite this as a single literal expression
 
 
 3. (Introduction.3) What happens if you add 1 to a function object?
-[[if the function object in integer then 1 will be added to it but if its array then the value will be appended to the array]]
- 
+[[
+Converts function to string and concatenates 1
+function() 1
+ ]]
 
 4. (Introduction.4) var obj = (function () {
 		var a;
@@ -59,7 +61,12 @@ Rewrite this as a single literal expression
 	rewrite using new, e.g.,
 	obj = new Foo();
 	obj.foo(); // Writes 5 to console	
-[[ Put your answer here]]
+[[ function Foo(){this.a=5}
+Foo.propotype.foo=function(){console.log(a)}
+obj= new Foo();
+obj.foo();
+
+]]
  
 
 5. (Introduction.5) var obj = (function() {

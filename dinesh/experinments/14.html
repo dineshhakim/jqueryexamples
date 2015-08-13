@@ -7,10 +7,12 @@
 					var result = jQuery.fn.pushStack.apply(a); // push a onto a.stack
 					for (i=0; i<a.length; i++) {               // modify a to [2, 3, 4, 5]
 					   a[i]++;
-					}
+					  
+					}				 
 					jQuery.fn.end.apply(a);  
 					$('#log1').append(JSON.stringify(result));
 					$('#log2').append(JSON.stringify(a));
+					
 				}
 				$(function(){
 					execute();				
